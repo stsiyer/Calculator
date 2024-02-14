@@ -13,8 +13,6 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.factorial(1), 1)
         self.assertEqual(calculator.factorial(5), 120)
         self.assertEqual(calculator.factorial(10), 3628800)
-        # test code error
-        self.assertEqual(calculator.factorial(5), 1)
 
     def test_natural_logarithm(self):
         self.assertAlmostEqual(calculator.natural_logarithm(1), 0)
