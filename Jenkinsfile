@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER_USERNAME = credentials('dockerhub-credentials')
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -34,7 +38,7 @@ pipeline {
         }
         stage('Deployment with Ansible') {
             steps {
-                ansiblePlaybook playbook: 'deploy.yml', inventory: 'hosts', extras: "-e DOCKER_IMAGE=stsiyer/calculator-app"
+                ansiblePlaybook playbook: 'deploy.yml', inventory: 'hosts', extras: "-e DOCKER_IMAGE=$DOCKER_USERNAME/calculator-app"
             }
         }
     }
