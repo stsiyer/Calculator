@@ -1,6 +1,7 @@
 import unittest
 import calculator
 
+
 class TestCalculator(unittest.TestCase):
     def test_square_root(self):
         self.assertAlmostEqual(calculator.square_root(9), 3)
