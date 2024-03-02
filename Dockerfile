@@ -7,8 +7,5 @@ WORKDIR /app
 # Copy the application code into the container at /app
 COPY . .
 
-# Expose the port the application runs on
-EXPOSE 8081
-
 # Define the command to run the application when the container starts
 CMD ["python3", "calculator.py"]
