@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Use a specific branch if needed, e.g., 'main' or 'master'
-                git branch: 'main', url: 'https://github.com/stsiyer/Calculator'
+                git branch: 'int', url: 'https://github.com/stsiyer/Calculator'
             }
         }
         // stage('Install Dependencies') {
