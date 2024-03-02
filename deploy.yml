@@ -1,3 +1,4 @@
+---
 - name: Deploy calculator app
   hosts: localhost
   tasks:
@@ -19,10 +20,5 @@
         state: started
         ports:
           - "8081:8081"
-        detach: yes
-
-    - name: SSH into container and execute Python file
-      docker_container_exec:
-        name: calculator-container
         command: python3 /app/calculator.py
-        privileged: yes
+        # detach: yes
