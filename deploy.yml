@@ -15,7 +15,7 @@
 
     - name: Run Docker container
       docker_container:
-        # name: calculator-container
+        name: calculator-container
         image: stsiyer/calculator-app:latest
         state: started
         ports:
