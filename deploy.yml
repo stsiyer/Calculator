@@ -16,7 +16,8 @@
     - name: Run Docker container
       docker_container:
         name: calculator-container
-        image: stsiyer/calculator-app  
+        image: stsiyer/calculator-app 
+        state: started
         ports:
           - "8081:8081"
         command: python3 /app/calculator.py
